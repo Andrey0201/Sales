@@ -3,7 +3,7 @@ package controllers;
 import models.Product;
 import views.SalesView;
 import utils.Rounder;
-//мроо
+
 public class ProductController {
     Product model;
     SalesView view;
