@@ -39,16 +39,19 @@ public class Validator {
             System.out.println("Введите цену!: ");
         }
         float price = scanner.nextFloat();
-        while (price <= 0) {
-            System.out.println("Неверное значение! Введите цену: ");
-            if (String.format("%.2f", price).equals(String.format("%f", price))){
-                System.out.println("Неверный формат ввода");
 
-            }else{
-                price = scanner.nextFloat();
+        while (price <= 0||price>=Float.MAX_VALUE) {
+            System.out.println("Неверное значение! Введите цену: ");
+            while (!scanner.hasNextFloat()) {
+                System.out.println("Формат не верный, введите число:");
+                scanner.next();
             }
 
+            price = scanner.nextFloat();
+
+
         }
+
         return price;
     }
 }

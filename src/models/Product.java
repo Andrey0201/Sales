@@ -7,7 +7,6 @@ import base.Income;
 
 public class Product implements  Income, Fiscal {
 
-
     private String name;
     private int quantity;
     private double price;

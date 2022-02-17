@@ -8,5 +8,6 @@ public class App {
         SalesView view = new SalesView(model);
         ProductController controller = new ProductController(model, view);
         controller.runApp();
+
     }
 }
